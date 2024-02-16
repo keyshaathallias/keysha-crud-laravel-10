@@ -25,8 +25,7 @@
               @forelse ($posts as $post)
                 <tr>
                   <td class="text-center">
-                    <img src="{{ asset('storage/app/public/posts/' . $post->image) }}" class="rounded"
-                      style="width: 150px">
+                    <img src="{{ asset('/storage/posts/' . $post->image) }}" class="rounded" style="width: 150px">
                   </td>
                   <td>{{ $post->title }}</td>
                   <td style="width: 400px">{!! $post->content !!}</td>

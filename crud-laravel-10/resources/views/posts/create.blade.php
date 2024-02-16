@@ -19,7 +19,7 @@
                 </div>
               @enderror
             </div>
-
+            <br>
             <div class="form-group">
               <label class="font-weight-bold">JUDUL</label>
               <input type="text" class="form-control @error('title') is-invalid @enderror" name="title"
@@ -31,7 +31,7 @@
                 </div>
               @enderror
             </div>
-
+            <br>
             <div class="form-group">
               <label class="font-weight-bold">KONTEN</label>
               <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5"
