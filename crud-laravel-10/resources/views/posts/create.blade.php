@@ -3,14 +3,16 @@
 @section('content')
   <div class="row">
     <div class="col-md-12 mt-5">
-      <div class="card border-0 shadow-sm rounded">
+      <div class="card">
         <div class="card-body">
+          <h2>Add Post</h2>
+          <hr>
           <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
 
             @csrf
 
             <div class="form-group">
-              <label class="font-weight-bold">GAMBAR</label>
+              <label class="font-weight-bold"><b>Gambar</b></label>
               <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
 
               @error('image')
@@ -21,7 +23,7 @@
             </div>
             <br>
             <div class="form-group">
-              <label class="font-weight-bold">JUDUL</label>
+              <label class="font-weight-bold"><b>Judul</b></label>
               <input type="text" class="form-control @error('title') is-invalid @enderror" name="title"
                 value="{{ old('title') }}" placeholder="Masukkan Judul Post">
 
@@ -33,7 +35,7 @@
             </div>
             <br>
             <div class="form-group">
-              <label class="font-weight-bold">KONTEN</label>
+              <label class="font-weight-bold"><b>Konten</b></label>
               <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5"
                 placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
 
